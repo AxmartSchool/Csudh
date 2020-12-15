@@ -8,8 +8,26 @@ namespace Csudh
 {
     class Program
     {
+
+        static List<Domain> Domainek;
+
         static void Main(string[] args)
         {
+
+           Domainek = Domain.Beolvasas();
+
+            DomainekSzama();
+
+            Console.ReadKey();
+
+        }
+
+        private static void DomainekSzama()
+        {
+
+            Console.WriteLine("3. Feladat: Domainek szama: "+Domainek.Count());
+
+
         }
     }
 }
