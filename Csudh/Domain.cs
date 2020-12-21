@@ -14,6 +14,29 @@ namespace Csudh
         public string IpCim { get; set; }
 
 
+
+        public string DomainFelepites(int szint)
+        {
+
+            string[] output = new string[5];
+               //output =  Nev.Split('.');
+
+            for (int i = 0; i < output.Length; i++)
+            {
+                if (Nev.Split('.').Length > i)
+                {
+                    output[i] = Nev.Split('.').Reverse().ToList()[i];
+                }
+                else
+                {
+                    output[i] = "nincs";
+                }
+                
+            }
+
+            return output[szint-1];
+        }
+
         public static List<Domain> Beolvasas()
         {
             var output = new List<Domain>();
